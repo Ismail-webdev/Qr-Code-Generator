@@ -32,5 +32,4 @@ To run the project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Ismail-webdev/Quote-Generator.git
-To run the project locally, follow these steps:
+   git clone https://github.com/Ismail-webdev/Qr-Code-Generator.git
