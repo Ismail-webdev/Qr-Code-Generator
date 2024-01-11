@@ -33,9 +33,6 @@ const clearUi = () => {
     if (saveLink)
         saveLink.remove();
 }
-form.addEventListener('submit', onGenerateSubmit);
-
-correct download qrcode
 const saveQrCode = (saveUrl) => {
     const link = document.createElement('a');
     link.id = 'save-link';
@@ -45,3 +42,4 @@ const saveQrCode = (saveUrl) => {
     link.innerHTML = 'Save Image';
     document.getElementById('generated-Qr').appendChild(link);
 }
+form.addEventListener('submit', onGenerateSubmit);
