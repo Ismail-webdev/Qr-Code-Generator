@@ -8,18 +8,18 @@ const onGenerateSubmit = (e) => {
 
     const url = document.getElementById('url').value;
     const size = document.getElementById('size').value;
-
+    // console.log(url, size);
     if (url === '') {
         alert('Please Enter URL');
-    } else {
+    }
+    else {
         generateQrCode(url, size);
         setTimeout(() => {
             const saveUrl = qr.querySelector('img').src;
             saveQrCode(saveUrl);
         }, 50);
     }
-};
-
+}
 const generateQrCode = (url, size) => {
     const qrcode = new QRCode('qr-code', {
         text: url,
@@ -27,17 +27,15 @@ const generateQrCode = (url, size) => {
         height: size,
     });
 };
-
 const clearUi = () => {
     qr.innerHTML = '';
     const saveLink = document.getElementById('save-link');
-    if (saveLink) {
+    if (saveLink)
         saveLink.remove();
-    }
-};
-
+}
 form.addEventListener('submit', onGenerateSubmit);
 
+correct download qrcode
 const saveQrCode = (saveUrl) => {
     const link = document.createElement('a');
     link.id = 'save-link';
@@ -45,6 +43,5 @@ const saveQrCode = (saveUrl) => {
     link.href = saveUrl;
     link.download = 'qr-code.png';
     link.innerHTML = 'Save Image';
-
-    document.body.appendChild(link);
-};
+    document.getElementById('generated-Qr').appendChild(link);
+}
