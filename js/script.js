@@ -38,7 +38,7 @@ const saveQrCode = (saveUrl) => {
     link.id = 'save-link';
     link.classList = 'SaveQr';
     link.href = saveUrl;
-    link.download = 'qr-code.png';
+    link.download = 'qr-code.jpg';
     link.innerHTML = 'Save Image';
     document.getElementById('generated-Qr').appendChild(link);
 }
